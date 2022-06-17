@@ -30,7 +30,40 @@ const questions = [
         opt_c: "NaN2",
         opt_d: "NaN",
         correct: "a"
-    }
+    },
+    {
+        question:"Which language runs in a web browser?",
+           opt_a: "Java",
+            opt_b: "C",
+            opt_c: "Python",
+            opt_d: "JavaScript",
+            correct: "d",
+        },
+        {
+            question: "What does CSS stand for?",
+            opt_a: "Central Style Sheets",
+            opt_b: "Cascading Style Sheets",
+            opt_c: "Cascading Simple Sheets",
+            opt_d: "Cars SUVs Sailboats",
+            correct: "b",
+        },
+        {
+            question: "What does HTML stand for?",
+            opt_a: "Hypertext Markup Language",
+            opt_b: "Hypertext Markdown Language",
+            opt_c: "Hyperloop Machine Language",
+            opt_d: "Helicopters Terminals Motorboats Lamborginis",
+            correct: "a",
+        },
+        {
+            question: "What year was JavaScript launched?",
+            opt_a: "1996",
+            opt_b: "1995",
+            opt_c: "1994",
+            opt_d: "none of the above",
+            correct: "b",
+      }
+    
 ];
 
 const question = document.getElementById('question');
@@ -75,7 +108,8 @@ submit.addEventListener('click', () =>{
         // console.log(givenAnswer);
         if(givenAnswer == questions[currentQuestion].correct)
             correctAnswers++;
-        currentQuestion++;
+        if(givenAnswer !== 'e')
+            currentQuestion++;
 
         if(currentQuestion < questions.length)
             loadQuestion();
